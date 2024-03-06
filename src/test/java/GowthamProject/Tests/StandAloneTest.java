@@ -28,7 +28,7 @@ public class StandAloneTest {
 		driver.findElement(By.id("login")).click();
 		List<WebElement> Products = driver.findElements(By.cssSelector(".mb-3"));
 		//System.out.println(driver.findElement(By.xpath("//div[@class='card']/div/h5/b")).getText());
-		//Just adding The Comment.
+		//Just adding The Comment with name Gowtham.
 		WebElement ProductName = Products.stream().filter(s->s.findElement(By.cssSelector("b"))
 				.getText().equals("IPHONE 13 PRO")).findFirst().orElse(null);
 		WebElement Desired_Product = ProductName.findElement(By.cssSelector("b"));
