@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel ="tests" name="Shopping_Cart">
+	<listeners>
+		<listener class-name="GowthamProject.TestComponent.Listeners">
+		</listener>
+	</listeners>	
+	<groups>
+		<run>
+			<include name = "Purchase"/>
+		</run>
+	</groups>
+  <test thread-count="5" name="Validations">
+    <classes>
+      <class name="GowthamProject.Tests.Error_Validation"/>
+      
+    </classes>
+  </test> <!-- Validations -->
+  <test name="Order_Submission">
+	  <classes>
+		  <class name="GowthamProject.Tests.OrderSubmission"/>
+	  </classes>
+	  
+  </test>
+</suite> <!-- Shopping_Cart -->
